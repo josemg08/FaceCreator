@@ -15,6 +15,7 @@ public class ItemDetailFragment extends PApplet {
 
     @Override
     public void setup() {
+        background(255,255,255);
         fill(255,0,0);
         box2d = new Box2DProcessing(this);
         box2d.createWorld();
