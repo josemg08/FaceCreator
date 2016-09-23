@@ -6,9 +6,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.0'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -24,12 +21,14 @@ task clean(type: Delete) {
 
 //.___ Define versions in a single place __./
 ext {
-    // Sdk and tools
-    minSdkVersion = 15
+    //.___ Sdk and tools __./
+    minSdkVersion = 16
     targetSdkVersion = 22
     compileSdkVersion = 23
-    buildToolsVersion = '23.0.3'
+    buildToolsVersion = '24.0.2'
 
-    // App dependencies
-    supportLibraryVersion = '23.4.0'
+    //.___ App dependencies __./
+    supportLibraryVersion = '24.2.1'
 }
+
+//.___ End of FaceCreator build gradle __./
