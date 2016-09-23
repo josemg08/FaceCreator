@@ -7,7 +7,7 @@
     tools:context="sandbox.josegonzalez.fragmentpaplet.FaceCreationActivity"
     tools:ignore="MergeRootFrame">
 
-    <android.support.design.widget.AppBarLayout
+    <!--<android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
@@ -32,15 +32,26 @@
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.AppBarLayout>-->
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/face_container"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_height="match_parent">
 
-    <android.support.design.widget.FloatingActionButton
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/face_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <include layout="@layout/child_node_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"  />
+
+    </RelativeLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +59,7 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@+id/face_container"
         app:layout_anchorGravity="top|end"
-        app:srcCompat="@android:drawable/ic_menu_save" />
+        app:srcCompat="@android:drawable/ic_menu_save" />-->
 
 </android.support.design.widget.CoordinatorLayout>
 <!--.___ End of activity_face_creation __.-->
