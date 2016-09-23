@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--.___ App material pallet __.-->
     <color name="colorIcons">#212121</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorPrimaryText">#212121</color>
-    <color name="colorPrimaryLight">#DCEDC8</color>
-    <color name="colorPrimary">#8BC34A</color>
-    <color name="colorPrimaryDark">#689F38</color>
-    <color name="colorAccent">#ea503f</color>
+    <color name="colorPrimaryLight">#a0eca0</color>
+    <color name="colorPrimary">#4ec64e</color>
+    <color name="colorPrimaryDark">#228B22</color>
+    <color name="colorAccent">#FF7F50</color>
+
 </resources>
+<!--.___ End of colors __.-->

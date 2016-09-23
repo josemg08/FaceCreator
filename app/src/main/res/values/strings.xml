@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">FragmentPaplet</string>
-    <string name="title_item_detail">Item Detail</string>
+    <string name="app_name">FaceCreator</string>
+    <string name="face_creation">Face creation</string>
 </resources>
+<!--.___ End of strings __.-->
