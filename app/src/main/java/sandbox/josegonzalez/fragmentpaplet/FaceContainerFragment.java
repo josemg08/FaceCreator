@@ -7,9 +7,11 @@ import processing.core.PApplet;
  __.*/
 public class FaceContainerFragment extends PApplet {
 
+    hexa
+
     @Override
     public void setup() {
-        background(255,255,255);
+        background(#cccccc);
         fill(255,0,0);
     }
 
