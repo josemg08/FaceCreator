@@ -1,4 +1,4 @@
-package sandbox.josegonzalez.fragmentpaplet;
+package sandbox.josegonzalez.fragmentpaplet.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,8 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 
+import sandbox.josegonzalez.fragmentpaplet.R;
+
 /**.___
- * Created by jose on 22/09/16.
+ * Created by Jose Gonzalez
+ *
+ * Argentina Sep 2016
  __.*/
 public class HomeActivity extends AppCompatActivity {
 

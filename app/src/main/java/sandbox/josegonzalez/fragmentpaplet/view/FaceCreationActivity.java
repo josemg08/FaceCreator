@@ -1,21 +1,34 @@
-package sandbox.josegonzalez.fragmentpaplet;
+package sandbox.josegonzalez.fragmentpaplet.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.NavUtils;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
+import sandbox.josegonzalez.fragmentpaplet.data.AttributeParser;
+
 /**.___
- * Created by jose on 22/09/16.
+ * Created by Jose Gonzalez
+ *
+ * Argentina Sep 2016
  __.*/
 public class FaceCreationActivity extends AppCompatActivity {
+
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_creation);
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        mRecyclerView.setAdapter(new AttributeListAdapter(AttributeParser.getInstance().getAttributeItems()));
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

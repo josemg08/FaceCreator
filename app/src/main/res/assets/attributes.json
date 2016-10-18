@@ -1,0 +1,27 @@
+"attributes" : [
+  {
+    "id":1,
+    "name": "eye1",
+    "resource":"face"
+  },
+  {
+    "id":2,
+    "name": "eye2",
+    "resource":"face"
+  },
+  {
+    "id":3,
+    "name": "eye3",
+    "resource":"face"
+  },
+  {
+    "id":4,
+    "name": "eye4",
+    "resource":"face"
+  },
+  {
+    "id":5,
+    "name": "eye5",
+    "resource":"face"
+  }
+]

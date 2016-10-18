@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="sandbox.josegonzalez.fragmentpaplet.FaceCreationActivity"
+    tools:context="sandbox.josegonzalez.fragmentpaplet.view.FaceCreationActivity"
     tools:ignore="MergeRootFrame">
 
     <!--<android.support.design.widget.AppBarLayout
