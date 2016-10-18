@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.NavUtils;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
+import sandbox.josegonzalez.fragmentpaplet.R;
 import sandbox.josegonzalez.fragmentpaplet.data.AttributeParser;
 
 /**.___
@@ -19,16 +21,25 @@ import sandbox.josegonzalez.fragmentpaplet.data.AttributeParser;
 public class FaceCreationActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
+    private AttributeListAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_creation);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
+        /*mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mRecyclerView.setAdapter(new AttributeListAdapter(AttributeParser.getInstance().getAttributeItems()));
+        mRecyclerView.setAdapter(new AttributeListAdapter(AttributeParser.getInstance().getAttributeItems()));*/
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
+
+        mAdapter = new AttributeListAdapter(AttributeParser.getInstance().getAttributeItems());
+        /*RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());*/
+        mRecyclerView.setAdapter(mAdapter);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
