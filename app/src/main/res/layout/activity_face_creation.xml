@@ -44,12 +44,13 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <include
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/child_node_list"
-            layout="@layout/child_node_list"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_alignParentBottom="true"  />
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"/>
 
     </RelativeLayout>
 

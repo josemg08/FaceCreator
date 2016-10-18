@@ -28,18 +28,18 @@ public class FaceCreationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_creation);
 
-        /*mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        mRecyclerView.setAdapter(new AttributeListAdapter(AttributeParser.getInstance().getAttributeItems()));*/
-
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
+        mRecyclerView = (RecyclerView) findViewById(R.id.child_node_list);
 
         mAdapter = new AttributeListAdapter(AttributeParser.getInstance().getAttributeItems());
-        /*RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());*/
+
+        //RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+
+        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.notifyDataSetChanged();
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

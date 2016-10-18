@@ -12,10 +12,10 @@ public class AttributeItem {
 
     private long id;
     private String name;
-    private String itemImageSrc;
+    private String resource;
 
-    public String getItemImageSrc(){
-        return itemImageSrc;
+    public String getResource(){
+        return resource;
     }
 
     public String getItemName(){
@@ -28,7 +28,7 @@ public class AttributeItem {
 
     public int getResourceId() {
         Resources resources = FaceCreatorApplication.getContext().getResources();
-        return resources.getIdentifier(itemImageSrc, "drawable", FaceCreatorApplication.getContext().getPackageName());
+        return resources.getIdentifier(resource, "drawable", FaceCreatorApplication.getContext().getPackageName());
     }
 
 }

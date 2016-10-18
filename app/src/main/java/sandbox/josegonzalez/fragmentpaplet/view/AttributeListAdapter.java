@@ -5,9 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
+import sandbox.josegonzalez.fragmentpaplet.FaceCreatorApplication;
 import sandbox.josegonzalez.fragmentpaplet.model.AttributeItem;
 
 import sandbox.josegonzalez.fragmentpaplet.R;
@@ -22,10 +24,12 @@ public class AttributeListAdapter extends RecyclerView.Adapter<AttributeListAdap
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView attributeImageView;
+        public TextView itemText;
 
         public MyViewHolder(View view) {
             super(view);
-            attributeImageView = (ImageView) view.findViewById(R.id.title);
+            attributeImageView = (ImageView) view.findViewById(R.id.item_image);
+            itemText = (TextView) view.findViewById(R.id.item_text);
         }
     }
 
@@ -44,7 +48,9 @@ public class AttributeListAdapter extends RecyclerView.Adapter<AttributeListAdap
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         AttributeItem attributeItem = attributeItems.get(position);
-        holder.attributeImageView.setImageResource(attributeItem.getResourceId());
+        holder.attributeImageView.setImageDrawable(FaceCreatorApplication.getContext()
+                .getResources().getDrawable(attributeItem.getResourceId()));
+        holder.itemText.setText(attributeItem.getItemName());
     }
 
     @Override
